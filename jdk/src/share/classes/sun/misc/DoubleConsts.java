@@ -52,7 +52,7 @@ public class DoubleConsts {
      *
      * @since 1.5
      */
-    public static final double  MIN_NORMAL      = 2.2250738585072014E-308;
+    public static final double  MIN_NORMAL      = Double.longBitsToDouble(0x0010000000000000L);
 
 
     /**

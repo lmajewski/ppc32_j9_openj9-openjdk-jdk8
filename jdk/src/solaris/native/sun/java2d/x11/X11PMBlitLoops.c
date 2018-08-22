@@ -26,7 +26,6 @@
 #include <stdlib.h>
 #include <jni.h>
 #include <jlong.h>
-#include "X11SurfaceData.h"
 #include "Region.h"
 
 JNIEXPORT void JNICALL
@@ -39,6 +38,8 @@ Java_sun_java2d_x11_X11PMBlitLoops_nativeBlit
      jint width, jint height)
 {
 #ifndef HEADLESS
+#include "X11SurfaceData.h"
+
     X11SDOps *srcXsdo, *dstXsdo;
     SurfaceDataBounds span, srcBounds;
     RegionData clipInfo;

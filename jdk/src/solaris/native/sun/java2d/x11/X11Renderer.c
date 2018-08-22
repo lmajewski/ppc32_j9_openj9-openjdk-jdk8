@@ -25,7 +25,6 @@
 
 #include "sun_java2d_x11_X11Renderer.h"
 
-#include "X11SurfaceData.h"
 #include "SpanIterator.h"
 #include "Trace.h"
 #include "ProcessPath.h"
@@ -35,6 +34,8 @@
 #include <jlong.h>
 
 #ifndef HEADLESS
+#include "X11SurfaceData.h"
+
 #define POLYTEMPSIZE    (int)(256 / sizeof(XPoint))
 #define ABS(n)          (((n) < 0) ? -(n) : (n))
 

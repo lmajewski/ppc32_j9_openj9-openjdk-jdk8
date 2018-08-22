@@ -75,7 +75,7 @@ public final class Float extends Number implements Comparable<Float> {
      * {@code 0x1.fffffeP+127f} and also equal to
      * {@code Float.intBitsToFloat(0x7f7fffff)}.
      */
-    public static final float MAX_VALUE = 0x1.fffffeP+127f; // 3.4028235e+38f
+    public static final float MAX_VALUE = Float.intBitsToFloat(0x7f7fffff); // 3.4028235e+38f
 
     /**
      * A constant holding the smallest positive normal value of type
@@ -85,7 +85,7 @@ public final class Float extends Number implements Comparable<Float> {
      *
      * @since 1.6
      */
-    public static final float MIN_NORMAL = 0x1.0p-126f; // 1.17549435E-38f
+    public static final float MIN_NORMAL = Float.intBitsToFloat(0x00800000); // 1.17549435E-38f
 
     /**
      * A constant holding the smallest positive nonzero value of type
@@ -93,7 +93,7 @@ public final class Float extends Number implements Comparable<Float> {
      * hexadecimal floating-point literal {@code 0x0.000002P-126f}
      * and also equal to {@code Float.intBitsToFloat(0x1)}.
      */
-    public static final float MIN_VALUE = 0x0.000002P-126f; // 1.4e-45f
+    public static final float MIN_VALUE = Float.intBitsToFloat(0x1); // 1.4e-45f
 
     /**
      * Maximum exponent a finite {@code float} variable may have.  It

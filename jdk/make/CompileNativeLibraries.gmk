@@ -85,7 +85,9 @@ include lib/ServiceabilityLibraries.gmk
 
 include lib/Awt2dLibraries.gmk
 
+ifndef BUILD_SOUNDLESS_ONLY
 include lib/SoundLibraries.gmk
+endif
 
 # Include the corresponding custom file, if present. 
 -include $(CUSTOM_MAKE_DIR)/CompileNativeLibraries.gmk

@@ -27,9 +27,6 @@
 
 #include "sun_java2d_opengl_GLXSurfaceData.h"
 
-#include "OGLRenderQueue.h"
-#include "GLXGraphicsConfig.h"
-#include "GLXSurfaceData.h"
 #include "awt_Component.h"
 #include "awt_GraphicsEnv.h"
 
@@ -39,6 +36,9 @@
  */
 
 #ifndef HEADLESS
+#include "OGLRenderQueue.h"
+#include "GLXGraphicsConfig.h"
+#include "GLXSurfaceData.h"
 
 extern LockFunc       OGLSD_Lock;
 extern GetRasInfoFunc OGLSD_GetRasInfo;

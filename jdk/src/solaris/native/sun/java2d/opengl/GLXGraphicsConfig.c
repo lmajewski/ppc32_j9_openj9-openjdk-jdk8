@@ -30,12 +30,12 @@
 
 #include "jni.h"
 #include "jlong.h"
-#include "GLXGraphicsConfig.h"
-#include "GLXSurfaceData.h"
 #include "awt_GraphicsEnv.h"
 #include "awt_util.h"
 
 #ifndef HEADLESS
+#include "GLXGraphicsConfig.h"
+#include "GLXSurfaceData.h"
 
 extern Bool usingXinerama;
 
@@ -667,6 +667,6 @@ Java_sun_java2d_opengl_GLXGraphicsConfig_getOGLCapabilities(JNIEnv *env,
 
     return glxinfo->context->caps;
 #else
-    return CAPS_EMPTY;
+    return 0;
 #endif /* !HEADLESS */
 }

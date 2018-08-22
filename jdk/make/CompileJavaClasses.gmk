@@ -179,7 +179,7 @@ ifeq (, $(filter $(OPENJDK_TARGET_OS), windows macosx))
   EXFILES += sun/awt/AWTCharset.java
 endif
 
-ifeq ($(OPENJDK_TARGET_OS), macosx)
+ifdef BUILD_HEADLESS_ONLY
   # exclude all X11 on Mac, we can't exclude some like below or we'll have compilation errors
   EXCLUDES += sun/awt/X11
 else

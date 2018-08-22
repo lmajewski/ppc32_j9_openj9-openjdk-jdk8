@@ -26031,7 +26031,7 @@ $as_echo "$as_me: Rewriting AS to \"$new_complete\"" >&6;}
   fi
 
   else
-    AS="$CC -c"
+    AS="$AS"
   fi
 
 

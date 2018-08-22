@@ -8261,6 +8261,9 @@ fi
     powerpc64)
       OPENJ9_CPU=ppc-64
       ;;
+    powerpc)
+      OPENJ9_CPU=ppc
+      ;;
     *)
       as_fn_error $? "unsupported OpenJ9 cpu $build_cpu" "$LINENO" 5
       ;;
@@ -8303,6 +8306,8 @@ fi
     OPENJ9_PLATFORM_CODE=xz64
   elif test "x$OPENJ9_CPU" = xppc-64; then
     OPENJ9_PLATFORM_CODE=ap64
+  elif test "x$OPENJ9_CPU" = xppc; then
+    OPENJ9_PLATFORM_CODE=ap
   else
     as_fn_error $? "Unsupported OpenJ9 cpu ${OPENJ9_CPU}!" "$LINENO" 5
   fi
@@ -27650,7 +27655,7 @@ $as_echo "$as_me: Rewriting AS to \"$new_complete\"" >&6;}
   fi
 
   else
-    AS="$CC -c"
+    AS="$AS"
   fi
 
 

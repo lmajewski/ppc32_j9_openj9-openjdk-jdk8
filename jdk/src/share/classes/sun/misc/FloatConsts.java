@@ -49,7 +49,7 @@ public class FloatConsts {
      * <code>float</code>, 2<sup>-126</sup>.  It is equal to the value
      * returned by <code>Float.intBitsToFloat(0x00800000)</code>.
      */
-    public static final float   MIN_NORMAL      = 1.17549435E-38f;
+    public static final float   MIN_NORMAL      = Float.intBitsToFloat(0x00800000);
 
     /**
      * The number of logical bits in the significand of a

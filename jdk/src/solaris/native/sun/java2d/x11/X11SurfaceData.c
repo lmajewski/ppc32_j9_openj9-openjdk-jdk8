@@ -23,7 +23,6 @@
  * questions.
  */
 
-#include "X11SurfaceData.h"
 #include "GraphicsPrimitiveMgr.h"
 #include "Region.h"
 #include "Trace.h"
@@ -38,7 +37,12 @@
 
 #include <dlfcn.h>
 
+#ifdef HEADLESS
+#define X11SDOps void
+#endif
+
 #ifndef HEADLESS
+#include "X11SurfaceData.h"
 static JDgaLibInfo DgaLibInfoStub;
 static JDgaLibInfo theJDgaInfo;
 static JDgaLibInfo *pJDgaInfo = &DgaLibInfoStub;
