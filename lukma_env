@@ -1,0 +1,40 @@
+#!/bin/sh
+
+export PATH=$PATH:/mnt/
+export AS=powerpc-poky-linux-gnuspe-as
+export AR=powerpc-poky-linux-gnuspe-ar
+export LDFLAGS=" -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fPIC"
+export PKG_CONFIG_DISABLE_UNINSTALLED=yes
+export NM=powerpc-poky-linux-gnuspe-nm
+export DEBUG_BINARIES=true
+export SIZE=powerpc-poky-linux-gnuspe-size
+export CXXFLAGS=" -O2 -pipe -g -feliminate-unused-debug-types -fvisibility-inlines-hidden  -fno-delete-null-pointer-checks -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double --sysroot=/"
+export MFLAGS="BUILD_HEADLESS_ONLY=1 BUILD_HEADLESS=true BUILD_SOUNDLESS_ONLY=1 X11_NOT_NEEDED=1 CUPS_NOT_NEEDED=1 ALSA_NOT_NEEDED=1 PULSE_NOT_NEEDED=1 MAKE_VERBOSE=y QUIETLY= VERBOSE=-s LOG_LEVEL=trace STRIP_POLICY=no_strip"
+export STRINGS=powerpc-poky-linux-gnuspe-strings
+export CPP="powerpc-poky-linux-gnuspe-gcc -E --sysroot=/ -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double"
+export LD="powerpc-poky-linux-gnuspe-ld --sysroot=/"
+export CCLD="powerpc-poky-linux-gnuspe-gcc  -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double --sysroot=/"
+export STRIP=powerpc-poky-linux-gnuspe-strip
+export LLVM_CONFIGURE_ARCH=powerpc
+export MAKE_VERBOSE=y
+export CXX="powerpc-poky-linux-gnuspe-g++  -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double --sysroot=/ -std=gnu++98"
+export OBJCOPY=powerpc-poky-linux-gnuspe-objcopy
+export MAKE=/usr/bin/make
+export CFLAGS=" -O2 -pipe -g -feliminate-unused-debug-types -Wno-error=deprecated-declarations  -fno-delete-null-pointer-checks -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double --sysroot=/"
+export RANLIB=powerpc-poky-linux-gnuspe-ranlib
+export CC="powerpc-poky-linux-gnuspe-gcc  -m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double --sysroot=/"
+export READELF=powerpc-poky-linux-gnuspe-readelf
+export OBJDUMP=powerpc-poky-linux-gnuspe-objdump
+export X11_NOT_NEEDED=yes
+export CUPS_NOT_NEEDED=yes
+export ALSA_NOT_NEEDED=yes
+
+export GLOBAL_CXXFLAGS="-m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double -fPIC --sysroot=/"
+export GLOBAL_CFLAGS="-m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double -fPIC --sysroot=/"
+export PPC_GCC_CXXFLAGS="-m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double -fPIC --sysroot=/"
+export PPC_GCC_CFLAGS="-m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double -fPIC --sysroot=/"
+export COMMON_CCXXFLAGS_JDK="-m32 -mcpu=8548 -mabi=spe -mspe -mfloat-gprs=double -fPIC --sysroot=/ -DHEADLESS"
+
+export OMR_HOST_ARCH=ppc
+export OMR_TARGET_DATASIZE=32
+export OMR_TOOLCHAIN=gcc
