@@ -69,7 +69,7 @@ classes-only:
         # The classes are now built and
         # any javah files have now been generated.
 
-libs: libs-only
+libs: classes libs-only
 libs-only:
 	+$(MAKE) -f CompileNativeLibraries.gmk
 
