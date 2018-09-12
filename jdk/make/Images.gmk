@@ -699,13 +699,13 @@ ifneq ($(POST_STRIP_CMD), )
   endef
 
   define strip-file
-	$(ECHO) Stripping $(LOG_INFO) $(patsubst $(OUTPUT_ROOT)/%,%,$<)
-	$(CHMOD) u+w $<
-	$(POST_STRIP_CMD) $<
-	$(call mcs-file)
-	$(CHMOD) go-w $<
-	$(MKDIR) -p $(@D)
-	$(TOUCH) $@
+#	$(ECHO) Stripping $(LOG_INFO) $(patsubst $(OUTPUT_ROOT)/%,%,$<)
+#	$(CHMOD) u+w $<
+#	$(POST_STRIP_CMD) $<
+#	$(call mcs-file)
+#	$(CHMOD) go-w $<
+#	$(MKDIR) -p $(@D)
+#	$(TOUCH) $@
   endef
 
   # Setup a rule for stripping files based on touch files
